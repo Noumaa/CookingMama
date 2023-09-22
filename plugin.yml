@@ -1,0 +1,5 @@
+name: CookingMama
+
+main: nouma\cookingmama\Main
+version: 0.1.0
+api: 5.5.0
