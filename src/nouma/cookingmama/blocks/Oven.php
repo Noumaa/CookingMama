@@ -41,7 +41,7 @@ class Oven extends Block
         $onSubmit = function (Player $player, Button $selected) {
             switch ($selected->getValue()) {
                 case 0:
-                    foreach (RecipeManager::getInstance()->getRecipes(RecipeType::OVEN) as $recipe) {
+                    foreach (RecipeManager::getInstance()->getRecipes(RecipeType::OVEN()) as $recipe) {
                         $player->sendMessage($recipe->getResult());
                     }
                     if ($player->getInventory()->contains(VanillaItems::BREAD()->setCount(2)) && $player->getInventory()->contains(VanillaItems::STEAK())) {

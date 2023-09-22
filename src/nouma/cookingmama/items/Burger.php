@@ -43,8 +43,8 @@ class Burger extends Food implements ItemComponents, Craftable
         return CustomiesItemFactory::getInstance()->get('cristelia:burger_beef');
     }
 
-    public function getRecipeType(): RecipeType
+    public function getRecipeType(): int
     {
-        return RecipeType::OVEN;
+        return RecipeType::OVEN();
     }
 }

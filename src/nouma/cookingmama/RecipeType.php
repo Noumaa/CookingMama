@@ -4,5 +4,8 @@ namespace nouma\cookingmama;
 
 enum RecipeType
 {
-    case OVEN;
+    public static function OVEN(): int
+    {
+        return 1;
+    }
 }

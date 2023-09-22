@@ -8,5 +8,5 @@ interface Craftable
 {
     public function getIngredients(): array;
     public function getResult(): Item;
-    public function getRecipeType(): RecipeType;
+    public function getRecipeType(): int;
 }

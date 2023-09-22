@@ -18,16 +18,16 @@ class RecipeManager
 
     public function registerRecipe(Craftable $item): void
     {
-        if (!key_exists($item->getRecipeType()->name, $this->recipes))
-            $this->recipes[$item->getRecipeType()->name] = [];
-        $this->recipes[$item->getRecipeType()->name] += [$item];
+        if (!key_exists($item->getRecipeType(), $this->recipes))
+            $this->recipes[$item->getRecipeType()] = [];
+        $this->recipes[$item->getRecipeType()] += [$item];
         $this->plugin->getLogger()->info('Registered '.$item->getResult()->getName().'\'s recipe');
     }
 
-    public function getRecipes(RecipeType $type = null): array
+    public function getRecipes(int $type = null): array
     {
         if ($type == null) return $this->recipes;
-        return $this->recipes[$type->name];
+        return $this->recipes[$type];
     }
 
     public static function getInstance(): RecipeManager {
