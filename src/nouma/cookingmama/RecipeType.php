@@ -2,7 +2,7 @@
 
 namespace nouma\cookingmama;
 
-enum RecipeType
+class RecipeType
 {
     public static function OVEN(): int
     {
